@@ -21,6 +21,7 @@ var packages = {
     '@angular2-material/radio': { format: 'cjs', defaultExtension: 'js', main: 'radio.js' },
     '@angular2-material/sidenav': { format: 'cjs', defaultExtension: 'js', main: 'sidenav.js' },
     '@angular2-material/toolbar': { format: 'cjs', defaultExtension: 'js', main: 'toolbar.js' },
+    '@angular2-material/progress-circle': { format: 'cjs', defaultExtension: 'js', main: 'progress-circle.js' },
     'parse': { format: 'cjs', defaultExtension: 'js', main: 'index.js' }
 };
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -47,6 +48,7 @@ var barrels = [
     'app/login',
     'app/clients-detail',
     'app/policies-detail',
+    'app/policies',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
