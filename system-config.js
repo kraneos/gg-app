@@ -22,6 +22,7 @@ var packages = {
     '@angular2-material/sidenav': { format: 'cjs', defaultExtension: 'js', main: 'sidenav.js' },
     '@angular2-material/toolbar': { format: 'cjs', defaultExtension: 'js', main: 'toolbar.js' },
     '@angular2-material/progress-circle': { format: 'cjs', defaultExtension: 'js', main: 'progress-circle.js' },
+    '@angular2-material/slide-toggle': { format: 'cjs', defaultExtension: 'js', main: 'slide-toggle.js' },
     'parse': { format: 'cjs', defaultExtension: 'js', main: 'index.js' }
 };
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -49,6 +50,7 @@ var barrels = [
     'app/clients-detail',
     'app/policies-detail',
     'app/policies',
+    'app/policies-collect',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
