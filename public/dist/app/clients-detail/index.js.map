@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../Users/poloagustin/git/angular-seggu/tmp/broccoli_type_script_compiler-input_base_path-ZrUhIxD8.tmp/0/src/app/clients-detail/index.ts"],"names":[],"mappings":";;;;AAAA,iBAAc,4BAA4B,CAAC,EAAA","sourcesContent":["export * from './clients-detail.component';\n"]}

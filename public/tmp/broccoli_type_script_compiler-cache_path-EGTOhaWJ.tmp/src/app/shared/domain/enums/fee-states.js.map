@@ -1,0 +1,1 @@
+{"version":3,"file":"fee-states.js","sourceRoot":"","sources":["../../../../Users/poloagustin/git/angular-seggu/tmp/broccoli_type_script_compiler-input_base_path-TO0yoQC9.tmp/0/src/app/shared/domain/enums/fee-states.ts"],"names":[],"mappings":";AAKC","sourcesContent":["export const enum FEE_STATES {\n  DEBE = 0,\n  PAGADO = 1,\n  OBSERVADO = 2,\n  PRELIQUIDADO = 3\n}\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"file":"acl.js","sourceRoot":"","sources":["../../../Users/poloagustin/git/angular-seggu/tmp/broccoli_type_script_compiler-input_base_path-ZrUhIxD8.tmp/0/src/app/shared/domain/acl.ts"],"names":[],"mappings":";AAAA;IAAA;IAGA,CAAC;IAAD,UAAC;AAAD,CAAC,AAHD,IAGC;AAHY,WAAG,MAGf,CAAA","sourcesContent":["export class ACL {\n  read: boolean;\n  write: boolean;\n}\n"]}
