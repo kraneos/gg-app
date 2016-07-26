@@ -1,5 +1,5 @@
 source :rubygems
-ruby "2.3.1"
+ruby "2.0.0"
 
 gem 'jekyll'
 gem 'RedCloth'
