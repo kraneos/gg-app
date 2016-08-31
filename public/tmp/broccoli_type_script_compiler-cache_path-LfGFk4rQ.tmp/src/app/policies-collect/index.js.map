@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../Users/poloagustin/git/angular-seggu/tmp/broccoli_type_script_compiler-input_base_path-L0B8idjO.tmp/0/src/app/policies-collect/index.ts"],"names":[],"mappings":";;;;AAAA,iBAAc,8BAA8B,CAAC,EAAA","sourcesContent":["export * from './policies-collect.component';\n"]}
