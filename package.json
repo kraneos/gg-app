@@ -1,0 +1,25 @@
+{
+  "name": "angular-seggu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PORT=80 node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/Seggu/angular-seggu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Seggu/angular-seggu/issues"
+  },
+  "homepage": "https://gitlab.com/Seggu/angular-seggu#README",
+  "dependencies": {
+    "cors": "^2.8.0",
+    "express": "^4.14.0"
+  }
+}
