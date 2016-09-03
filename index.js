@@ -1,9 +1,10 @@
 var express = require('express');
+var path = require('path');
 
 var app = express();
 
 // Serve static assets from the /public folder
-app.use('/', express.static(path.join(__dirname, '/public')));
+app.use('/', express.static(path.join(__dirname, '/dist')));
 
 // Use CORS
 app.use(require('./cors'));
