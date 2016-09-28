@@ -26,10 +26,11 @@ if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH_STAGING" ]; then
   git clone $SSH_TARGET_REPO_STAGING out
   cd out
   git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+  git rm . || exit 0
+
   cd ..
 
   # Clean out existing contents
-  rm -rf out/**/* || exit 0
 
   # Run our compile script
   npm run deploy-staging
