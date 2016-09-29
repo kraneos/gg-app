@@ -4,6 +4,7 @@ set -e # Exit with nonzero exit code if anything fails
 SOURCE_BRANCH_STAGING="staging"
 SOURCE_BRANCH_MASTER="master"
 
+TARGET_REPO_STAGING="https://github.com/kraneos/gg-app-staging.git"
 SSH_TARGET_REPO_STAGING="git@github.com:kraneos/gg-app-staging.git"
 TARGET_BRANCH="gh-pages"
 
@@ -23,7 +24,7 @@ if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH_STAGING" ]; then
 
   # Clone the existing gh-pages for this repo into out/
   # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
-  git clone $SSH_TARGET_REPO_STAGING out
+  git clone $TARGET_REPO_STAGING out
   cd out
   git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
   git rm . -r || exit 0
