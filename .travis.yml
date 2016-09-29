@@ -12,3 +12,7 @@ deploy:
   on:
     branch: master
     branch: staging
+env:
+  global:
+  - ENCRYPTION_LABEL: "bc7a18e02161"
+  - COMMIT_AUTHOR_EMAIL: "poloagustin@gmail.com"
