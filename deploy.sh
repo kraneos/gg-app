@@ -4,10 +4,6 @@ set -e # Exit with nonzero exit code if anything fails
 SOURCE_BRANCH_STAGING="staging"
 SOURCE_BRANCH_MASTER="master"
 
-TARGET_REPO_STAGING="https://github.com/kraneos/gg-app-staging.git"
-TOKEN_TARGET_REPO_STAGING="https://6836592a7f8b31ba3f6fc90f4042a540caf0cd20@github.com/kraneos/gg-app-staging.git"
-
-SSH_TARGET_REPO_STAGING="git@github.com:kraneos/gg-app-staging.git"
 TARGET_BRANCH="gh-pages"
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
@@ -83,7 +79,7 @@ if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH_STAGING" ]; then
 fi
 
 if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH_MASTER" ]; then
-  echo "Deploy to Staging"
+  echo "Deploy to Master"
 
   npm run deploy-prod
 
