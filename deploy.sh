@@ -35,6 +35,8 @@ if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH_STAGING" ]; then
   find . -name '*.css' -exec git rm -r {} \;
   find . -name '*.gz' -exec git rm -r {} \;
 
+  cp id_rsa_travis.enc ../id_rsa_travis.enc
+
   cd ..
 
   # Clean out existing contents
@@ -43,6 +45,7 @@ if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH_STAGING" ]; then
   npm run deploy-staging
 
   # Now let's go have some fun with the cloned repo
+  cp id_rsa_travis.enc out/id_rsa_travis.enc
   cd out
   ls -l
   git remote -v
