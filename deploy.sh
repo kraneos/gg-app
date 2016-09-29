@@ -27,6 +27,8 @@ if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH_STAGING" ]; then
   git clone $TARGET_REPO_STAGING out
   cd out
   git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+
+  ls -l
   # git rm . -r || exit 0
   find . -name '*.html' -exec git rm -r {} \;
   find . -name '*.js' -exec git rm -r {} \;
