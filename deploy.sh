@@ -5,6 +5,8 @@ SOURCE_BRANCH_STAGING="staging"
 SOURCE_BRANCH_MASTER="master"
 
 TARGET_REPO_STAGING="https://github.com/kraneos/gg-app-staging.git"
+TOKEN_TARGET_REPO_STAGING="https://6836592a7f8b31ba3f6fc90f4042a540caf0cd20@github.com/kraneos/gg-app-staging.git"
+
 SSH_TARGET_REPO_STAGING="git@github.com:kraneos/gg-app-staging.git"
 TARGET_BRANCH="gh-pages"
 
@@ -24,7 +26,8 @@ if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH_STAGING" ]; then
 
   # Clone the existing gh-pages for this repo into out/
   # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
-  git clone $TARGET_REPO_STAGING out
+  # git clone $TARGET_REPO_STAGING out
+  git clone $TOKEN_TARGET_REPO_STAGING out
   cd out
   git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 
@@ -68,13 +71,14 @@ if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH_STAGING" ]; then
   ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
   ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
   ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-  openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in id_rsa_travis.enc -out id_rsa_travis -d
-  chmod 600 id_rsa_travis
-  eval `ssh-agent -s`
-  ssh-add id_rsa_travis
+  # openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in id_rsa_travis.enc -out id_rsa_travis -d
+  # chmod 600 id_rsa_travis
+  # eval `ssh-agent -s`
+  # ssh-add id_rsa_travis
 
   # Now that we're all set up, we can push.
-  git push $SSH_TARGET_REPO $TARGET_BRANCH
+  # git push $SSH_TARGET_REPO $TARGET_BRANCH
+  git push origin $TARGET_BRANCH
 
 fi
 
