@@ -68,10 +68,10 @@ if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH_STAGING" ]; then
   ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
   ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
   ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-  openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in id_rsa_travis.enc -out deploy_key -d
-  chmod 600 deploy_key
+  openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in id_rsa_travis.enc -out id_rsa_travis -d
+  chmod 600 id_rsa_travis
   eval `ssh-agent -s`
-  ssh-add deploy_key
+  ssh-add id_rsa_travis
 
   # Now that we're all set up, we can push.
   git push $SSH_TARGET_REPO $TARGET_BRANCH
