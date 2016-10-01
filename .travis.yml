@@ -7,11 +7,10 @@ script:
   - npm build
 deploy:
   provider: script
-  script: bash -x deploy.sh
+  script: npm run deploy-prod
   skip_cleanup: true
   on:
     branch: master
-    branch: staging
 env:
   global:
   - ENCRYPTION_LABEL: "bc7a18e02161"
