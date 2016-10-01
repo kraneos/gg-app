@@ -7,8 +7,14 @@ script:
   - npm build
 deploy:
   provider: script
-  script: bash deploy.sh
+  script: bash -x deploy.sh
   skip_cleanup: true
   on:
     branch: master
     branch: staging
+env:
+  global:
+  - ENCRYPTION_LABEL: "bc7a18e02161"
+  - COMMIT_AUTHOR_EMAIL: "poloagustin@gmail.com"
+  - TARGET_REPO_STAGING: https://github.com/kraneos/gg-app-staging.git
+  - SSH_TARGET_REPO_STAGING: git@github.com:kraneos/gg-app-staging.git
