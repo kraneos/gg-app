@@ -1,4 +1,6 @@
 set mypath=%cd%
+git checkout staging
+git pull origin staging
 cd ..
 call git clone https://github.com/kraneos/gg-app-staging
 cd gg-app-staging
