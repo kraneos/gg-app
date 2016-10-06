@@ -7,8 +7,8 @@ describe('seggu App', function() {
     page = new SegguPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying Seggu', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Seggu');
   });
 });
