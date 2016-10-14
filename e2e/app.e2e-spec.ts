@@ -12,3 +12,4 @@ describe('seggu App', function() {
     expect(page.getParagraphText()).toEqual('Seggu');
   });
 });
+
