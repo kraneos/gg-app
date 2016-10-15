@@ -53,7 +53,7 @@ describe('Authentication capabilities', function() {
     username.sendKeys('usuario');
     password.sendKeys('usuario');
     loginButton.click();
-    browser.waitForAngular();
+    browser.waitForAngular('/client-policies');
 
     expect(browser.getCurrentUrl()).toEqual('http://localhost:4200/client-policies');
   });
