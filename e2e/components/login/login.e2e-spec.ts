@@ -46,7 +46,7 @@ describe('Authentication capabilities', function() {
     expect(browser.getCurrentUrl()).not.toEqual(loginURL);
   });*/
 
-    it('should accept a valid username and password and display policies page', function () {
+    it('should accept a valid insurance client credencials and display client-policies page', function () {
 
     browser.get('/login');
 
@@ -54,6 +54,8 @@ describe('Authentication capabilities', function() {
     password.sendKeys('usuario');
     loginButton.click();
     browser.waitForAngular('/client-policies');
+    // browser.waitForAngular('/client-policies');
+    // browser.wait(setTimeout, 10);
 
     expect(browser.getCurrentUrl()).toEqual('http://localhost:4200/client-policies');
   });
@@ -69,6 +71,20 @@ describe('Authentication capabilities', function() {
     browser.waitForAngular();
 
     expect(browser.getCurrentUrl()).toEqual(loginURL);
+  });
+
+  it('should accept a valid PAS credencials and display homepage', function () {
+
+    browser.get('/login');
+
+    username.sendKeys('ecolombano');
+    password.sendKeys('1234');
+    loginButton.click();
+    browser.waitForAngular('/http://localhost:4200/');
+    // browser.waitForAngular('/client-policies');
+    // browser.wait(setTimeout, 10);
+
+    expect(browser.getCurrentUrl()).toEqual('http://localhost:4200/');
   });
 });
 
