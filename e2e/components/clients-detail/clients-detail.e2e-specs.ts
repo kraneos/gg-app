@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor/globals';
 
-describe('Authentication capabilities', function() {
+describe('Client details', function() {
   let homeURL;
   let fecha = element(by.name('fecha'));
   let policynumber = '00';
@@ -16,6 +16,7 @@ describe('Authentication capabilities', function() {
     password.sendKeys('1234');
     loginButton.click();
     browser.waitForAngular('/http://localhost:4200/');
+    homeURL = browser.getCurrentUrl();
     // browser.waitForAngular('/client-policies');
     // browser.wait(setTimeout, 10);
 
@@ -24,7 +25,6 @@ describe('Authentication capabilities', function() {
 
   it('should search policies by date and policy number', function() {
     browser.get('http://localhost:4200/');
-    homeURL = browser.getCurrentUrl();
 
     fecha.sendKeys('2016-11-05');
 
