@@ -28,10 +28,12 @@ describe('Client details', function() {
     browser.waitForAngular('http://localhost:4200/');
     // browser.findElement(by.css('#md-input-0-input')).clear();
     let fecha = browser.findElement(by.id('md-input-0-input'));
-    fecha.sendKeys('11/05');
-
     let policyid = '00';
     let clientlastname = 'Colombano';
+
+    fecha.sendKeys('11/05');
+    browser.waitForAngular('http://localhost:4200/');
+
     expect(element(by.xpath('//md-list-item[@class="md-3-line"]//span[.="00"]')).getText()).toEqual(policyid);
     expect(element(by.xpath('//md-list-item[@class="md-3-line"]//span[.="Colombano"]')).getText()).toEqual(clientlastname);
   });
