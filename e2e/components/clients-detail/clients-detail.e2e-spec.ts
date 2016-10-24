@@ -25,6 +25,7 @@ describe('Client details', function() {
   it('should search policies by date and policy number', function() {
     browser.get('http://localhost:4200/');
 
+    // let fecha = element(by.xpath);
     // fecha.sendKeys('2016-11-05');
 
     expect(element(by.xpath('//md-list-item[@class="md-3-line"]//span[.="00"]')));
