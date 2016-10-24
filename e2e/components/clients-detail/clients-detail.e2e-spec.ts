@@ -23,12 +23,17 @@ describe('Client details', function() {
   });
 
   it('should search policies by date and policy number', function() {
+
     browser.get('http://localhost:4200/');
+    browser.waitForAngular('http://localhost:4200/');
+    // browser.findElement(by.css('#md-input-0-input')).clear();
+    let fecha = browser.findElement(by.id('md-input-0-input'));
+    fecha.sendKeys('11/05');
 
-    // let fecha = element(by.xpath);
-    // fecha.sendKeys('2016-11-05');
-
-    expect(element(by.xpath('//md-list-item[@class="md-3-line"]//span[.="00"]')));
+    let policyid = '00';
+    let clientlastname = 'Colombano';
+    expect(element(by.xpath('//md-list-item[@class="md-3-line"]//span[.="00"]')).getText()).toEqual(policyid);
+    expect(element(by.xpath('//md-list-item[@class="md-3-line"]//span[.="Colombano"]')).getText()).toEqual(clientlastname);
   });
 
 
